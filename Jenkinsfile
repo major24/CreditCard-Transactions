@@ -4,8 +4,7 @@ node {
 	}
 	
 	stage ('Build and publish') {
-		dotnet restore
-		dotnet publish -c Production -o publish
+		sh(script: 'dotnet publish creditcard-transactions.sln -c Release')
 	}
 
 }
