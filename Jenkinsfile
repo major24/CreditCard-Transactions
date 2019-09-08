@@ -5,4 +5,13 @@ node {
 	stage('Restore Packages') {
   		bat "dotnet restore"
 	}
+	stage('Clean project') {
+		bat "dotnet clean"
+	}
+	stage('Build project') {
+		bat "dotnet build"
+	}
+	stage('Publish project') {
+		bat "dotnet publish -c Production -o publish"
+	}
 }
