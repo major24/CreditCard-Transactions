@@ -3,8 +3,6 @@ node {
 		git branch: 'master', url: 'https://github.com/major24/creditcard-transactions.git'
 	}
 	stage('Restore Packages') {
- 		steps {
-  			bat "dotnet restore"
- 		}
+  		bat "dotnet restore"
 	}
 }
